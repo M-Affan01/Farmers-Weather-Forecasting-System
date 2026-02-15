@@ -713,19 +713,6 @@ df.isnull().sum()  # All zeros
 └─────────┘     └─────────┘     └─────────┘     └─────────┘     └─────────┘
 ```
 
-### Key Design Patterns
-
-| Pattern | Implementation | Benefit |
-|---------|---------------|---------|
-| **Pipeline Pattern** | Sequential data flow through EDA → Preprocessing → Feature Selection → Modeling | Ensures reproducibility and modularity |
-| **Factory Pattern** | Model zoo creates different classifier instances (LR, RF, XGB) | Easy to add new models |
-| **Strategy Pattern** | Interchangeable feature selection methods (RF importance, MI, PCA) | Flexibility in feature engineering |
-| **Decorator Pattern** | Scaler wrapper around raw weather features | Clean separation of concerns |
-| **Singleton Pattern** | Single instance of LabelEncoder and Scaler reused | Memory efficient |
-| **Facade Pattern** | Simple prediction interface hides complexity | User-friendly API |
-| **Observer Pattern** | Visualization updates on data changes | Real-time plotting |
-| **Template Pattern** | Consistent preprocessing steps for all models | Standardized workflow |
-
 ---
 
 ## 🛠️ Technical Stack
@@ -1726,9 +1713,7 @@ XGBoost:
 | **Dimensionality Reduction** | PCA (4 components, 67.1% variance) | 40% memory reduction, noise removal |
 | **Feature Selection** | Mutual Information + RF Importance | Removed low-value features, 15% accuracy improvement |
 | **SMOTE** | Synthetic Minority Oversampling | Balanced classes, 12% accuracy improvement |
-| **Hyperparameter Tuning** | Random search with 5-fold CV | 5% accuracy boost over default parameters |
 | **Model Persistence** | Joblib compression | 80% smaller model files (45MB vs 225MB) |
-| **Batch Processing** | Vectorized operations | 10x faster inference for multiple locations |
 | **Caching** | Joblib Memory | 50% faster repeated computations |
 
 ### Memory Usage Profile
@@ -2026,10 +2011,6 @@ A: Yes, the model can be integrated with real-time weather APIs for live predict
 ---
 
 ## ⭐ Support
-
-If you find this project useful, please consider giving it a star on GitHub!
-
-[![Star on GitHub](https://img.shields.io/github/stars/yourusername/pakistan-weather-forecasting?style=social)](https://github.com/M-Affan01/pakistan-weather-forecasting)
 
 ### How to Cite
 
